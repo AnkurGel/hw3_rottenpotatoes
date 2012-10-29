@@ -23,9 +23,12 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  # your steps here
+  Then I should see "Aladdin" before "Chocolat"
+  Then I should see "The Help" before "The Incredibles"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
+  Then I should see "Aladdin" before "The Help"
+  Then I should see "The Terminator" before "Aladdin"
+  
 
